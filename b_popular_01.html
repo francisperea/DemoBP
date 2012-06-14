@@ -5,8 +5,8 @@
 		<title>Demo para aplicación Banco Popular</title>
 		<link href="css/bpopular.css" type="text/css" rel="stylesheet" media="all" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
 	</head>
-	
 
 	<body marginheight="0", marginwidth="0", topmargin="0", leftmargin="0" >
 		<div id="unidad">
@@ -99,16 +99,6 @@
 	
 		</div>
 		
-		<script>
-		$('a[href^="#"]').live('click', function() {
-			var hash = $(this).attr('href');
-			var offset = $(hash).offset();
-			if (offset) {
-				$('html, body').animate({ scrollLeft: offset.left }, 'slow');
-				location.hash = hash;
-				return false;
-			}
-		});
-	</script>
+		
 	</body>
 </html>
