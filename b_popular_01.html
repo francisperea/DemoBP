@@ -4,7 +4,9 @@
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>Demo para aplicación Banco Popular</title>
 		<link href="css/bpopular.css" type="text/css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	</head>
+	
 
 	<body marginheight="0", marginwidth="0", topmargin="0", leftmargin="0" >
 		<div id="unidad">
@@ -55,7 +57,7 @@
 					<div class="botones">
 						<img src="img/b_solapa_inf_tx.png" alt="" />
 						<img src="img/b_solapa_inf_pdf.png" alt="" />
-						<img src="img/b_solapa_inf_retro.png" alt="" /><a href="#"> Retroceder</a><a href="#">Avanzar </a>
+						<img src="img/b_solapa_inf_retro.png" alt="" /><a href="#"> Retroceder</a><a href="#pag02">Avanzar </a>
 						<img src="img/b_solapa_inf_avan.png" alt="" />
 					</div>
 				</div>
@@ -88,7 +90,7 @@
 					<div class="botones">
 						<img src="img/b_solapa_inf_tx.png" alt="" />
 						<img src="img/b_solapa_inf_pdf.png" alt="" />
-						<img src="img/b_solapa_inf_retro.png" alt="" /><a href="#"> Retroceder</a><a href="#">Avanzar </a>
+						<img src="img/b_solapa_inf_retro.png" alt="" /><a href="#pag01"> Retroceder</a><a href="#">Avanzar </a>
 						<img src="img/b_solapa_inf_avan.png" alt="" />
 					</div>
 				</div>
@@ -96,5 +98,17 @@
 			</div>
 	
 		</div>
+		
+		<script>
+		$('a[href^="#"]').live('click', function() {
+			var hash = $(this).attr('href');
+			var offset = $(hash).offset();
+			if (offset) {
+				$('html, body').animate({ scrollLeft: offset.left }, 'slow');
+				location.hash = hash;
+				return false;
+			}
+		});
+	</script>
 	</body>
 </html>
