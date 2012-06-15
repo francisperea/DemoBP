@@ -8,8 +8,9 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
-		<script type="text/javascript" src="js/jquery.localscroll-min.js">
-		</script><script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.localscroll-min.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
 		<script>
 			$(function(){ 
 				$('.navegacion').localScroll({
@@ -25,11 +26,13 @@
 				$('#intro').fancybox({
 					padding : 0
 				});
+				
+				$('img[usemap]').maphilight()
 			});
 		</script>
 	</head>
 
-	<body marginheight="0", marginwidth="0", topmargin="0", leftmargin="0" >
+	<body>
 		<div id="ventana">
 			<div id="unidad">
 				<div id="pag01" class="global">
@@ -80,7 +83,7 @@
 							<img src="img/b_solapa_inf_tx.png" alt="" />
 							<img src="img/b_solapa_inf_pdf.png" alt="" />
 							<span class="navegacion">
-								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+								<a class="scroll" href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
 								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
 							</span>
 							
@@ -92,7 +95,6 @@
 				
 					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" alt="" /></div>
 					
-
 					<div style="display:none">
 					
 							<div id="data">
@@ -103,27 +105,7 @@
 								
 							</div>
 					</div>
-					<!--
 
-					<div class="popup">
-					
-						<div class="cabecera_popup"><img src="img/b_cerrar_pop.png" alt="" /></div>
-						
-						<div class="px_popup">
-						
-							<div class="intro">
-							
-								<h1>Una interfaz familiar</h1>
-								
-								<p>Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?: Menú “Pagos”</p>
-								
-							</div>
-							
-						</div>
-		
-					</div>
-	
--->
 					<div class="pie">
 						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
 						<div class="botones">
@@ -131,11 +113,32 @@
 							<img src="img/b_solapa_inf_pdf.png" alt="" />
 							<span class="navegacion">
 								<a class="scroll" href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
-								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								<a class="scroll" href="#pag03"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
 							</span>
 						</div>
 					</div>
 	
+				</div>
+
+				<div id="pag03" class="global">
+				
+					<img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant02" />
+					<map name="pant02">
+						<area title="menu" shape="rect" coords="9,181,187,229" href="www.google.com" alt="menu" />
+					</map>
+					
+					<div class="pie">
+						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+						<div class="botones">
+							<a id="intro" href="#data"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+							<img src="img/b_solapa_inf_pdf.png" alt="" />
+							<span class="navegacion">
+								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+								<a class="scroll" href="#pag03"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+							</span>
+						</div>
+					</div>
+					
 				</div>
 				
 			</div>
