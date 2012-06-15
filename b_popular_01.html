@@ -13,21 +13,28 @@
 		<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
 		<script>
 			$(function(){ 
-				$('.navegacion').localScroll({
+				$('.navegacion, map').localScroll({
 					target: '#ventana',
 					axis: 'x',
 					easing: 'easeOutBack',
 					duration: 2000,
-					onAfter: function(){
-						$('#intro').trigger('click');
+					onAfter: function(anchor, settings){
+						var diapo=$('#'+anchor.id);
+						var boton =diapo.find('.intro');
+						if (boton) {
+							boton.trigger('click');
+						}
 					}
 				});
 				
-				$('#intro').fancybox({
+				$('.intro').fancybox({
 					padding : 0
 				});
 				
-				$('img[usemap]').maphilight()
+				$('img[usemap]').maphilight({
+					fillColor: '00FF00',
+					//alwaysOn: true,
+				})
 			});
 		</script>
 	</head>
@@ -109,7 +116,7 @@
 					<div class="pie">
 						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
 						<div class="botones">
-							<a id="intro" href="#data"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+							<a class="intro" href="#data"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
 							<img src="img/b_solapa_inf_pdf.png" alt="" />
 							<span class="navegacion">
 								<a class="scroll" href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
@@ -122,9 +129,9 @@
 
 				<div id="pag03" class="global">
 				
-					<img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant02" />
+					<img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant02" class="mapa"/>
 					<map name="pant02">
-						<area title="menu" shape="rect" coords="9,181,187,229" href="www.google.com" alt="menu" />
+						<area title="menu" shape="rect" coords="9,181,187,229" href="#pag01" alt="menu" />
 					</map>
 					
 					<div class="pie">
