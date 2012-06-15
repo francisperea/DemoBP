@@ -1,0 +1,211 @@
+/* @group tipografia */
+
+/*@font-face{ font-family: ResagokrRegular; font-style: normal; font-weight: normal; src: url(../fonts/Resagokr-webfont.eot), url(../fonts/Resagokr-webfont.eot?iefix) format("eot"), url(../fonts/Resagokr-webfont.woff) format("woff"), url(../fonts/Resagokr-webfont.ttf) format("truetype"), url(../fonts/Resagokr-webfont.svg) format("svg"); }*/
+
+
+
+/* @end */
+
+/* @group reglas generales */
+* {
+ margin: 0;
+ padding: 0;
+}
+
+body{
+	color: #5e5e5e;
+	font: 0.9em Lucida, Verdana, Trebuchet, sans-serif;
+}
+
+.clearfix{
+	clear: both;
+}
+h1{
+	color: #b80d24;
+	font: 1.5em Times, "Times New Roman", Georgia;
+}
+h2{
+	color: #565957;
+	font: 1.5em Times, "Times New Roman", Georgia;
+
+}
+a:link, a:visited{
+	color: #b80d24;
+	text-decoration: none;
+}
+a:hover{
+	color: #565957;
+	text-decoration: none;
+}
+
+/* @end */
+
+/* @group posiciones */
+#unidad{
+	height: 950px;
+	width: 8400px;
+}
+
+#ventana{
+	height: 950px;
+	width: 1200px;
+	overflow: hidden;
+}
+.global{
+	width: 1200px;
+	height: 950px;
+	position: absolute;
+	float: left;
+}
+#pag01{
+	left: 0px;
+	position: relative;
+}
+#pag02{
+	left: 0px;
+	position: relative;
+}
+.logotipo {
+	width: 210px;
+	height: 250px;
+	float: left;
+}
+.video{
+	width: 530px;
+	height: 250px;
+	float: left;
+}
+.titulo{
+	width: 460px;
+	height: 250px;
+	float: right;
+}
+.menu_izdo{
+	width: 250px;
+	float: left;
+	margin-bottom: 20px;
+}
+.menu_izdo .boton{
+	width: 210px;
+	height: 50px;
+}
+.boton img, .boton_segundo img{
+	float: left;
+}
+.menu_izdo p, .menu_izdo a{
+	color: #3a79fc;
+	padding-top: 10px;
+}
+.content{
+	width: 950px;
+	height: 640px;
+	float: left;
+	margin-top: 20px;
+}
+.content .boton, .content .boton_segundo{
+	color: #000;
+	clear: both;
+}
+.content .boton a, .content .boton p{
+	height: 30px;
+	padding-top: 15px;
+
+}
+.content .boton_segundo a, .content .boton_segundo p{
+	height: 20px;
+	padding-top: 5px;
+	padding-left: 15px;
+		color: #000;
+	text-decoration: underline;
+}
+.content .boton_segundo a:hover{
+	color: #b80d24;
+}
+.pie{
+	/*clear: both;
+	float: none;*/
+	height: 60px;
+	bottom: 0;
+	background: url(../img/solapa_inf.png) no-repeat 0 10px;
+	width: 840px;
+	/*display: inline-block;*/
+	position: absolute;
+	left: 0;
+}
+.pie .botones{
+	float: right;
+	margin-right: 30px;
+}
+.pie .botones a{
+	color: #fff;
+	font-size: 1.2em;
+	padding-left: 5px;
+	line-height: 4;
+	float: left;
+	padding-right: 5px;
+}
+.pie img{
+	margin-top: 10px;
+	float: left;
+}
+.pie a.ruta, .pie span.ruta{
+	font-size: 0.8em;
+	color: #fff;
+	line-height: 6;
+
+}
+.boton_segundo{
+	margin-left: 30px;
+}
+/* @end */
+
+/* @group reglas especificas */
+.content_01{
+	width: 630px;
+}
+
+
+/* @end */
+
+/* @group popup */
+
+.img_fondo{
+	position: relative;
+	width: 1200px;
+	height: 950px;
+	z-index: -1;
+}
+
+.popup{
+	position: relative;
+	width: 600px;
+	height: 100;
+	z-index: 1;
+	top: -600px;
+	left: 400px;
+}
+.cabecera_popup{
+	background: url(../img/cab_pop.png) no-repeat;
+	width: 600px;
+	height: 60px;
+}
+.cabecera_popup img{
+	float: right;
+}
+.px_popup{
+	background: url(../img/1pxhor_pop.png) repeat-y;
+	width: 600px;
+}
+.intro{
+	padding: 0 20px;
+	color: #fff;
+}
+.intro h1{
+	color: #fff;
+}
+.pie_popup{
+	background: url(../img/pie_pop.png) no-repeat;
+	width: 600px;
+	height: 60px;
+}
+/* @end */
