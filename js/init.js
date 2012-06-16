@@ -57,7 +57,9 @@ $(function(){
 	$('area').CreateBubblePopup({ innerHtmlStyle: 	  	{ color:'#FFFFFF', 'text-align':'center' },
 								  themeName: 	  	 	'all-black',
 								  themePath: 	  	 	'images/jquerybubblepopup-themes',							  						 
-								  manageMouseEvents:	false 
+								  manageMouseEvents:	false,
+								  position: 'bottom',
+								  align: 'center'
 							   });
 
 	// all popups of <AREA> tags are invisible
@@ -88,12 +90,13 @@ $(function(){
 				var img_top = parseInt(img_position.top);
 				var img_left = parseInt(img_position.left);
 				var area_x = parseInt($(this).attr('coords').split(',')[0]);
-				var area_y = parseInt($(this).attr('coords').split(',')[1]);
+				var area_y = parseInt($(this).attr('coords').split(',')[3]);
+				var area_width = parseInt($(this).attr('coords').split(',')[2] - $(this).attr('coords').split(',')[0]);
 				var bubble_width  = parseInt($('#'+$(this).GetBubblePopupID()).outerWidth(false));
 				var bubble_height = parseInt($('#'+$(this).GetBubblePopupID()).outerHeight(false));
 			
 				//move the bubble popup to the <AREA> coordinates...
-				$('#'+$(this).GetBubblePopupID()).css({ top: (area_y+img_top-bubble_height)+'px', left: (area_x+img_left-Math.abs(bubble_width/2))+'px' });
+				$('#'+$(this).GetBubblePopupID()).css({ top: (area_y+img_top)+'px', left: (area_x+img_left+Math.abs(area_width/2)-Math.abs(bubble_width/2))+'px' });
 			
 			};
 	});
@@ -102,7 +105,7 @@ $(function(){
 	$('area').mouseleave(function(){
 
 		if( $(this).data('visible') ){
-			var seconds_to_wait = 3;
+			var seconds_to_wait = 1;
 			function doCountdown(){
 				timer = setTimeout(function(){
 					seconds_to_wait--;
