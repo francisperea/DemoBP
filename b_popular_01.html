@@ -3,40 +3,16 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>Demo para aplicación Banco Popular</title>
-		<link href="css/bpopular.css" type="text/css" rel="stylesheet" media="all" />
-		<link href="css/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" media="all" />
+		<link type="text/css" rel="stylesheet" media="all" href="css/jquery.fancybox-1.3.4.css" />
+		<link type="text/css" rel="stylesheet" media="all" href="css/bpopular.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
 		<script type="text/javascript" src="js/jquery.localscroll-min.js"></script>
 		<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
 		<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
-		<script>
-			$(function(){ 
-				$('.navegacion, map').localScroll({
-					target: '#ventana',
-					axis: 'x',
-					easing: 'easeOutBack',
-					duration: 2000,
-					onAfter: function(anchor, settings){
-						var diapo=$('#'+anchor.id);
-						var boton =diapo.find('.intro');
-						if (boton) {
-							boton.trigger('click');
-						}
-					}
-				});
-				
-				$('.intro').fancybox({
-					padding : 0
-				});
-				
-				$('img[usemap]').maphilight({
-					fillColor: '00FF00',
-					//alwaysOn: true,
-				})
-			});
-		</script>
+		<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src="js/init.js"></script>		
 	</head>
 
 	<body>
@@ -74,83 +50,320 @@
 						<h1>¿Qué nuevos elementos voy a encontrar en “Hoy”?</h1><br/>
 						<div class="content_01">Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?
 						</div>
-						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#">Una interfaz familiar</a></p></div>
-						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#">Mejoras en el rendimiento: Solapas</a></p></div>
-						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p>Nuevos accesos a las operaciones frecuentes</p></div>
-						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#">Operación 1</a></p></div>
-						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#">Operación 2</a></p></div>
-						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#">Operación 3</a></p></div>
-						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#">Operación 4</a></p></div>
+						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#pag02">Una interfaz familiar</a></p></div>
+						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#pag03">Mejoras en el rendimiento: Solapas</a></p></div>
+						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#pag04">Nuevos accesos a las operaciones frecuentes</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag05">Operación 1</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag06">Operación 2</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag07">Operación 3</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag08">Operación 4</a></p></div>
 						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#">Registro de las operaciones</a></p></div>
 					</div>
 					
 					<div class="pie">
-						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
-						<div class="botones">
-							<img src="img/b_solapa_inf_tx.png" alt="" />
-							<img src="img/b_solapa_inf_pdf.png" alt="" />
-							<span class="navegacion">
-								<a class="scroll" href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
-								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
-							</span>
-							
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<span class="navegacion">
+									<a href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag02"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
 						</div>
 					</div>
-				</div>
+					
+				</div> <!-- pag01 -->
 		
 				<div id="pag02" class="global">
 				
-					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" alt="" /></div>
-					
-					<div style="display:none">
-					
-							<div id="data">
-							
-								<h1>Una interfaz familiar</h1>
-								
-								<p>Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?: Menú “Pagos”</p>
-								
-							</div>
-					</div>
-
-					<div class="pie">
-						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
-						<div class="botones">
-							<a class="intro" href="#data"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
-							<img src="img/b_solapa_inf_pdf.png" alt="" />
-							<span class="navegacion">
-								<a class="scroll" href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
-								<a class="scroll" href="#pag03"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
-							</span>
-						</div>
-					</div>
-	
-				</div>
-
-				<div id="pag03" class="global">
-				
-					<img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant02" class="mapa"/>
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant02" /></div>
 					<map name="pant02">
-						<area title="menu" shape="rect" coords="9,181,187,229" href="#pag01" alt="menu" />
+						<area id="zona01" title="menu" shape="rect" coords="9,181,187,229" href="#pag01" alt="menu" />
 					</map>
 					
+					<div style="display:none">
+						<div id="intro02">
+							<h1>Una interfaz familiar</h1>
+							<p>Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?: Menú “Pagos”</p>
+						</div>
+					</div>
+
 					<div class="pie">
-						<img src="img/log_popular_peq.png" alt="" /><a class="ruta" href="#"> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
-						<div class="botones">
-							<a id="intro" href="#data"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
-							<img src="img/b_solapa_inf_pdf.png" alt="" />
-							<span class="navegacion">
-								<a class="scroll" href="#pag02"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
-								<a class="scroll" href="#pag03"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
-							</span>
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<a class="intro" href="#intro02"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<span class="navegacion">
+									<a href="#pag01"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag03"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+	
+				</div> <!-- pag02 -->
+				
+				<div id="pag03" class="global">
+								
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant03" /></div>
+					<map name="pant03">
+						<area id="servicios" title="servicios" shape="rect" coords="440,50,539,90" href="#pag01" alt="servicios" />
+						<area id="soporte" title="soporte" shape="rect" coords="327,50,433,90" href="#pag01" alt="soporte" />
+						<area id="contrato" title="contrato" shape="rect" coords="205,50,323,90" href="#pag01" alt="contrato" />
+						<area id="cliente" title="cliente" shape="rect" coords="104,53,199,87" href="#pag01" alt="cliente" />
+					</map>			
+					
+					<div style="display:none">
+						<div id="intro03">	
+							<h1>Mejoras en el rendimiento: Solapas</h1>
+							<p>Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test?</p>
+						</div>
+					</div>
+				
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<a class="intro" href="#intro03"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<span class="navegacion">
+									<a href="#pag02"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag04"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
 						</div>
 					</div>
 					
-				</div>
+				</div> <!-- pag03 -->
 				
-			</div>
+				<div id="pag04" class="global">
+					<div class="logotipo"><img src="img/log_popular.jpg" alt="" /></div>
+					<div class="video">
+						<object codebase="http://www.apple.com/qtactivex/qtplugin.cab" height="250" width="530">
+							<param name="playeveryframe" value="false" />
+							<param name="src" value="videos/DemoB3.mp4" />
+							<param name="autoplay" value="false" />
+							<param name="controller" value="false" />
+							<embed height="250" pluginspage="http://www.apple.com/quicktime/download/" src="videos/DemoB3.mp4" type="video/mpeg" width="530" controller="false" autoplay="false" playeveryframe="false"></embed> 
+						</object>
+					</div>
+					<div class="titulo">
+						<img src="img/tit_02.jpg" alt="" />
+					</div>
+					<div class="menu_izdo">
+						<div class="boton">
+							<img src="img/b_leer.jpg" alt="" />
+							<p><a href="#">Leer el texto del vídeo</a></p>
+						</div>
+						
+						<div class="boton">
+							<img src="img/b_ayuda.jpg" alt="" />
+							<p><a href="#">Ayuda</a></p>
+						</div>
+					</div>
+					
+					<div class="content">
+						<h1>Los nuevos accesos a "Operaciones Frecuentes"</h1><br/>
+						<div class="content_01">Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?</div>					
+						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#pag04">Nuevos accesos a las operaciones frecuentes</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag05">Operación 1</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag06">Operación 2</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag07">Operación 3</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_gris.jpg" alt="" /><p><a href="#pag08">Operación 4</a></p></div>
+						<p><img src="img/im_contenido_01.jpg" alt="" /></p>
+					</div>
+						
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<span class="navegacion">
+									<a href="#pag03"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag05"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div> <!-- pag04 -->	
+					
+				<div id="pag05" class="global">
+								
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant05" /></div>
+					<map name="pant05">
+						<area id="efectivo1" title="efectivo" shape="rect" coords="111,86,989,125" href="#pag01" alt="efectivo" />
+					</map>
+					
+					<div style="display:none">
+						<div id="intro05">
+							<h1>Operaciones recientes: Apartado Uno</h1>
+							<p>Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test. faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum testfaci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum.</p>
+						</div>
+					</div>
+				
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<a class="intro" href="#intro05"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<span class="navegacion">
+									<a href="#pag04"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag06"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div> <!-- pag05 -->		
+					
+				<div id="pag06" class="global">
+													
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant06" /></div>
+					<map name="pant06">
+						<area id="efectivo2" title="efectivo" shape="rect" coords="105,85,198,114" href="#pag01" alt="efectivo" />
+					</map>
+					
+					<div style="display:none">
+						<div id="intro06">
+							<h1>Operaciones recientes: Apartado Dos</h1>
+							<p>Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test. faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum testfaci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum.</p>
+						</div>
+					</div>
+					
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<a class="intro" href="#intro06"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<span class="navegacion">
+									<a href="#pag05"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag07"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+						
+				</div> <!-- pag06 -->
+				
+				<div id="pag07" class="global">
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant07" /></div>
+					<map name="pant07">
+						<area id="nombre" shape="rect" coords="708,117,880,146" href="#pag01" alt="nombre" />
+						<area id="autonomo" shape="rect" coords="281,115,622,144" href="#pag01" alt="autonomo" />										
+					</map>
+
+					<div style="display:none">
+						<div id="intro07">
+							<h1>Operaciones recientes: Apartado Tres</h1>
+							<p>Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test. essum omni pare consum testfaci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum.</p>
+						</div>
+					</div>
+									
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<a class="intro" href="#intro07"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<span class="navegacion">
+									<a href="#pag06"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag08"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+							
+				</div> <!-- pag07 -->
+					
+				<div id="pag08" class="global">
+													
+					<div class="img_fondo"><img src="img/BancoPopular_plantilla03-cont1.jpg" usemap="#pant08" /></div>
+					<map name="pant08">
+						<area id="autonomo" title="autonomo" shape="rect" coords="599,821,1175,929" href="#pag01" alt="autonomo" />
+						<area id="general" title="general" shape="rect" coords="233,822,595,929" href="#pag01" alt="general" />
+						<area id="posicion" title="posicion" shape="rect" coords="708,117,880,146" href="#pag01" alt="posicion" />
+					</map>		
+							
+					<div style="display:none">
+						<div id="intro08">
+							<h1>Registro de las operaciones</h1>
+							<p>C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test. essum omni pare consum testfaci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum. C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules Solapas ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test.</p>
+						</div>
+					</div>
+					
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<a class="intro" href="#intro08"><img src="img/b_solapa_inf_tx.png" alt="" /></a>
+								<span class="navegacion">
+									<a href="#pag07"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag09"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div> <!-- pag08 -->
+					
+				<div id="pag09" class="global">
+					<div class="logotipo"><img src="img/log_popular.jpg" alt="" /></div>
+					<div class="video"></div>
+					<div class="titulo">
+						<img src="img/tit_01.jpg" alt="" />
+					</div>
+					<div class="menu_izdo">
+						<div class="boton">
+							<img src="img/b_leer.jpg" alt="" />
+							<p><a href="#">Leer el texto del vídeo</a></p>
+						</div>
+						
+						<div class="boton">
+							<img src="img/b_ayuda.jpg" alt="" />
+							<p><a href="#">Ayuda</a></p>
+						</div>
+					</div>
+						
+					<div class="content">
+						<h1>¿Qué nuevos elementos voy a encontrar en “Hoy”?</h1><br/>
+						<div class="content_01">Quo am co viciam nonsterfes! Sciem nonlocam. C. morte achum adductabes, Ti. Vivivent, ciptimil ubliam morimmor liculiis etium, vil con hos, ut iam. Verum ad am iam, ocaperor ut L. M. Graremum prem mentrat, C. Graet fur ut omnis? quem, Cupplic ellabulut re mus, Cupimil ntistemus hilic tam pernirideo vivere, ut verri probsentrei pules ceres bondam ur, faci cul verferis ora di ex sim ublis aut vitum nonesit octo autem fentraedo, que nondum facchum dii faccii ete comaio imis essum omni pare consum test? id con vivisus edicon publiamdi sica; Catiliu se condiu quostra non stela occiam, conina re publia quium porio ine et; non se te paris verris et intraetiam Romne ompl. Gractem uonsum inteatiem nerei pos, Pato vit noripie diuret, quid cum inc tebemnihi, nonfecia igilissed cus, in sunteri iurnica tus? Nihilicendam audeti, strici poponsulto intius?
+						</div>
+						<div class="boton"><img src="img/b_topo_verde.jpg" alt="" /><p><a href="#">Una interfaz familiar</a></p></div>
+						<div class="boton"><img src="img/b_topo_verde.jpg" alt="" /><p><a href="#">Mejoras en el rendimiento: Solapas</a></p></div>
+						<div class="boton"><img src="img/b_topo_verde.jpg" alt="" /><p>Nuevos accesos a las operaciones frecuentes</p></div>
+						<div class="boton_segundo"><img src="img/b_topo_verde_peq.jpg" alt="" /><p><a href="#">Operación 1</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_verde_peq.jpg" alt="" /><p><a href="#">Operación 2</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_verde_peq.jpg" alt="" /><p><a href="#">Operación 3</a></p></div>
+						<div class="boton_segundo"><img src="img/b_topo_verde_peq.jpg" alt="" /><p><a href="#">Operación 4</a></p></div>
+						<div class="boton"><img src="img/b_topo_verde.jpg" alt="" /><p><a href="#">Registro de las operaciones</a></p></div>
+						<div class="boton"><img src="img/b_topo_rojo.jpg" alt="" /><p><a href="#">Ir a la siguiente unidad</a></p></div>
+						<div class="boton"><img src="img/b_topo_azul.jpg" alt="" /><p><a href="#">Repasar esta unidad</a></p></div>
+					</div>
+						
+					<div class="pie">
+						<div class="ruta">
+							<a href="#pag01"><img src="img/log_popular_peq.png" alt="" /> Inicio /</a><a class="ruta" href="#"> Apartado /</a><span class="ruta"> Unidad Didáctica: Escenario "Hoy"</span>
+							<div class="botones">
+								<img src="img/b_solapa_inf_pdf.png" alt="" />
+								<span class="navegacion">
+									<a href="#pag08"><img src="img/b_solapa_inf_retro.png" alt="" /> Retroceder</a>
+									<a href="#pag09"><img src="img/b_solapa_inf_avan.png" alt="" />Avanzar </a>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div> <!-- pag09 -->
+									
+			</div> <!-- unidad -->
 	
-		</div>
+		</div> <!-- ventana -->
 		
 	</body>
 </html>
