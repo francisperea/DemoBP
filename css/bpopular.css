@@ -50,6 +50,7 @@ a:hover{
 	height: 950px;
 	width: 1200px;
 	overflow: hidden;
+	margin: 0 auto;
 }
 .global{
 	width: 1200px;
@@ -124,34 +125,38 @@ a:hover{
 	/*clear: both;
 	float: none;*/
 	height: 60px;
-	bottom: 0;
-	background: url(../img/solapa_inf.png) no-repeat 0 10px;
+	bottom: 48px;
+	background: url(../img/solapa_inf.png) no-repeat 0 0px;
 	width: 840px;
 	/*display: inline-block;*/
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
+	position: relative;
+	float: left;
 }
 .pie .botones{
 	float: right;
 	margin-right: 30px;
+	font-size: 1.2em;
 }
 .pie .botones a{
 	color: #fff;
 	font-size: 1.2em;
 	padding-left: 5px;
-	line-height: 4;
 	float: left;
 	padding-right: 5px;
+	margin-top: -5px;
+}
+.pie .botones a img{
+	margin-top: 5px;
 }
 .pie img{
-	margin-top: 10px;
 	float: left;
 }
-.pie a.ruta, .pie span.ruta{
+.pie div.ruta a, .pie span.ruta{
 	font-size: 0.8em;
 	color: #fff;
-	line-height: 6;
-
+	line-height: 4;
 }
 .boton_segundo{
 	margin-left: 30px;
@@ -168,7 +173,7 @@ a:hover{
 
 /* @group popup */
 
-.img_fondo{
+/*.img_fondo{
 	position: relative;
 	width: 1200px;
 	height: 950px;
@@ -206,5 +211,18 @@ a:hover{
 	background: url(../img/pie_pop.png) no-repeat;
 	width: 600px;
 	height: 60px;
+}*/
+
+
+#fancybox-content p{
+	width: 600px;
+	color: #28a6c7;
+}
+#fancybox-content h1{
+	color: #dbdbdb;
+	margin-bottom: 10px;
+}
+#fancybox-content p{
+	color: #e8e8e8;
 }
 /* @end */
