@@ -41,30 +41,25 @@ a:hover{
 /* @end */
 
 /* @group posiciones */
-#unidad{
-	height: 950px;
-	width: 8400px;
-}
-
 #ventana{
 	height: 950px;
 	width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
 }
+
+#unidad{
+	height: 950px;
+	width: 10800px;
+	position:relative;
+}
+
 .global{
 	width: 1200px;
 	height: 950px;
 	float: left;
 }
-#pag01{
-	left: 0px;
-	position: relative;
-}
-#pag02{
-	left: 0px;
-	position: relative;
-}
+
 .logotipo {
 	width: 210px;
 	height: 250px;
@@ -85,6 +80,15 @@ a:hover{
 	float: left;
 	margin-bottom: 20px;
 }
+
+.pie{
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	width: 840px;
+	background: url(../img/solapa_inf.png) no-repeat 0 0px;
+}
+
 .menu_izdo .boton{
 	width: 210px;
 	height: 50px;
@@ -115,24 +119,11 @@ a:hover{
 	height: 20px;
 	padding-top: 5px;
 	padding-left: 15px;
-		color: #000;
+	color: #000;
 	text-decoration: underline;
 }
 .content .boton_segundo a:hover{
 	color: #b80d24;
-}
-.pie{
-	/*clear: both;
-	float: none;*/
-	height: 60px;
-	bottom: 48px;
-	background: url(../img/solapa_inf.png) no-repeat 0 0px;
-	width: 840px;
-	/*display: inline-block;*/
-	/*position: absolute;*/
-	left: 0;
-	position: relative;
-	float: left;
 }
 .pie .botones{
 	float: right;
