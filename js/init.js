@@ -79,7 +79,7 @@ $(function(){
 				var img_top = parseInt(img_position.top);
 				var img_left = parseInt(img_position.left);
 				var area_x = parseInt($(this).attr('coords').split(',')[0]);
-				var area_y = parseInt($(this).attr('coords').split(',')[3]);
+				var area_y = parseInt($(this).attr('coords').split(',')[1]);
 				var area_width = parseInt($(this).attr('coords').split(',')[2] - $(this).attr('coords').split(',')[0]);
 				var bubble_width  = parseInt($('#'+$(this).GetBubblePopupID()).outerWidth(false));
 				var bubble_height = parseInt($('#'+$(this).GetBubblePopupID()).outerHeight(false));
@@ -92,9 +92,7 @@ $(function(){
 			$('.menu_izdo .boton a').data('visible', false);
 		};
 	});
-	
-	
-	
+			
 	// Configuración de las burbujas de las zonas calientes
 	$('area').css({ display: 'block'});
 	$('area').each(function(){
@@ -112,8 +110,7 @@ $(function(){
 
 	$('area').data('visible', false);
 	
-	var timer;
-	$('area').mouseover(function(){
+	$('area').click(function(){
 	
 			if( !$(this).data('visible') ){
 			
@@ -133,13 +130,17 @@ $(function(){
 				var img_top = parseInt(img_position.top);
 				var img_left = parseInt(img_position.left);
 				var area_x = parseInt($(this).attr('coords').split(',')[0]);
-				var area_y = parseInt($(this).attr('coords').split(',')[3]);
+				var area_y = parseInt($(this).attr('coords').split(',')[1]);
 				var area_width = parseInt($(this).attr('coords').split(',')[2] - $(this).attr('coords').split(',')[0]);
 				var bubble_width  = parseInt($('#'+$(this).GetBubblePopupID()).outerWidth(false));
 				var bubble_height = parseInt($('#'+$(this).GetBubblePopupID()).outerHeight(false));
 			
 				$('#'+$(this).GetBubblePopupID()).css({ top: (area_y+img_top)+'px', left: (area_x+img_left+Math.abs(area_width/2)-Math.abs(bubble_width/2))+'px' });
 			
+			}
+			else {
+				$('area').HideAllBubblePopups();
+				$('area').data('visible', false);
 			};
 	});
 
