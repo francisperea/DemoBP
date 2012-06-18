@@ -143,29 +143,6 @@ $(function(){
 				$('area').data('visible', false);
 			};
 	});
-
-	/*
-$('area').mouseleave(function(){
-
-		if( $(this).data('visible') ){
-			var seconds_to_wait = 1;
-			function doCountdown(){
-				timer = setTimeout(function(){
-					seconds_to_wait--;
-					if(seconds_to_wait > 0){
-						doCountdown();
-					}else{
-						clearTimeout(timer);
-						$('area').HideAllBubblePopups();
-						$('area').data('visible', false);
-					};
-				},1000);
-			};
-			doCountdown();
-		};
-		
-	});
-*/
 	
 	// Configuración botonera desplegable
 	var ancho;
@@ -183,7 +160,6 @@ $('area').mouseleave(function(){
 			$('.pie').animate({width: 55}, 'fast');
 			$('.despliegue').html('<a href="#"><img src="img/solapa_inf_close.png" /></a>').addClass('cerrado');
 		}
-		
 	});
 	
 });
