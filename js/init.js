@@ -54,7 +54,7 @@ $(function(){
 	
 
 	//create bubble popups for each area tag and disable mouse events...
-	$('area').CreateBubblePopup({ innerHtmlStyle: 	  	{ color:'#FFFFFF', 'text-align':'center' },
+	$('area').CreateBubblePopup({ innerHtmlStyle: 	  	{ color:'#FFFFFF', 'text-align':'center', 'font-size': '14px'},
 								  themeName: 	  	 	'all-black',
 								  themePath: 	  	 	'images/jquerybubblepopup-themes',							  						 
 								  manageMouseEvents:	false,
@@ -81,7 +81,12 @@ $(function(){
 				
 				//hide all popups, update the innerHtml and show this popup
 				$('area').HideAllBubblePopups();
-				$(this).SetBubblePopupInnerHtml( $(this).attr('alt') );
+				
+				var tipcontent = $(this).next('.tipcontent').html();
+				if (tipcontent)
+					$(this).SetBubblePopupInnerHtml( tipcontent );
+				else
+					$(this).SetBubblePopupInnerHtml( $(this).attr('alt') );
 				$(this).ShowBubblePopup();
 				
 				//get <IMG> position and <AREA> coordinates...

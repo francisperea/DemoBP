@@ -217,3 +217,10 @@ a:hover{
 	color: #e8e8e8;
 }
 /* @end */
+
+/* @group tooltips */
+.tipcontent {
+	display: none;
+}
+
+/* @end */
