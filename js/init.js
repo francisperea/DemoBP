@@ -1,10 +1,13 @@
 $(function(){ 
-	$('.navegacion, map, .content').localScroll({
+	$('.navegacion, .content, .ruta').localScroll({
 		target: '#ventana',
 		axis: 'x',
 		//easing: 'easeOutBack',
-		duration: 100,
+		duration: 250,
 		hash: true,
+		onBefore: function(){
+		    $.fancybox.close();
+		},
 		onAfter: function(anchor, settings){
 			var diapo=$('#'+anchor.id);
 			var boton =diapo.find('.intro');
@@ -16,10 +19,12 @@ $(function(){
 	
 	$('.intro').fancybox({
 		padding : 0,
-		autoDimensions: false,
+		autoDimensions: true,
 		overlayShow: false,
 		hideOnContentClick: true,
-		scrolling: false
+		scrolling: false,
+		speedIn: 100,
+		speedOut: 100		
 	});
 	
 	$('img[usemap]').maphilight({

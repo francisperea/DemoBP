@@ -222,5 +222,11 @@ a:hover{
 .tipcontent {
 	display: none;
 }
-
+#pista01{
+	/*width: 20px;*/
+}
 /* @end */
+
+#intro02{
+	width: 600px;
+}
