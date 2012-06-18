@@ -229,7 +229,7 @@ a:hover{
 .pie .despliegue{
 	position: absolute;
 	right: -35px;
-	bottom: 11px;
+	bottom: 5px;
 }
 
 .pie .inicio,
@@ -254,6 +254,7 @@ a:hover{
 
 .pie img{
 	vertical-align: middle;
+	padding-bottom: 6px;
 }
 
 .pie div.ruta a,

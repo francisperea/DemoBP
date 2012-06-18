@@ -119,33 +119,20 @@ $(function(){
 		};
 		
 	});
-	
-	// Configuración botonera desplegable
 	var ancho;
+	// Configuración botonera desplegable
 	$('.despliegue').click(function(){
 		if ($('.despliegue').hasClass('cerrado')) {
 			// Abre
-			$('.pie').animate({
-				width: 'show',
-				},
-				200,
-				function(){
-					$('.ruta, .botones').show();	
-				});
+			$('.pie').animate({	width: ancho}, 'fast');
+			$('.ruta, .botones').fadeIn('fast');
 			$('.despliegue').html('<a href="#"><img src="img/solapa_inf_open.png" /></a>').removeClass('cerrado');;			
 		}
 		else {
 			// Cierra
-		    ancho = $('.pie').width();
-			$('.ruta, .botones').hide({
-				},
-				100,
-				function(){
-					$('.pie').animate({
-						width: 'hide'
-					},
-					'slow');
-				});
+			ancho  = $('.pie').width();
+			$('.ruta, .botones').fadeOut('fast');
+			$('.pie').animate({width: 55}, 'fast');
 			$('.despliegue').html('<a href="#"><img src="img/solapa_inf_close.png" /></a>').addClass('cerrado');
 		}
 		
