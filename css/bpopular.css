@@ -81,14 +81,6 @@ a:hover{
 	margin-bottom: 20px;
 }
 
-.pie{
-	position: absolute;
-	bottom: 0;
-	height: 60px;
-	width: 840px;
-	background: url(../img/solapa_inf.png) no-repeat 0 0px;
-}
-
 .menu_izdo .boton{
 	width: 210px;
 	height: 50px;
@@ -110,6 +102,9 @@ a:hover{
 	color: #000;
 	clear: both;
 }
+.boton_segundo{
+	margin-left: 20px;
+}
 .content .boton a, .content .boton p{
 	height: 30px;
 	padding-top: 15px;
@@ -125,33 +120,7 @@ a:hover{
 .content .boton_segundo a:hover{
 	color: #b80d24;
 }
-.pie .botones{
-	float: right;
-	margin-right: 30px;
-	font-size: 1.2em;
-}
-.pie .botones a{
-	color: #fff;
-	font-size: 1.2em;
-	padding-left: 5px;
-	float: left;
-	padding-right: 5px;
-	margin-top: -5px;
-}
-.pie .botones a img{
-	margin-top: 5px;
-}
-.pie img{
-	float: left;
-}
-.pie div.ruta a, .pie span.ruta{
-	font-size: 0.8em;
-	color: #fff;
-	line-height: 4;
-}
-.boton_segundo{
-	margin-left: 30px;
-}
+
 /* @end */
 
 /* @group reglas especificas */
@@ -222,11 +191,77 @@ a:hover{
 .tipcontent {
 	display: none;
 }
-#pista01{
-	/*width: 20px;*/
+#pista02{
+	width: 200px;
+	text-align: left;
+	padding: 5px;
+	overflow: scroll;
+	height: 200px;
+}
+#pista05{
+	width: 400px;
+	text-align: left;
+}
+#pista05 img{
+	float: left;
+}
+#servicios{
+	width: 200px;
+	text-align: left;
 }
 /* @end */
 
 #intro02{
 	width: 600px;
 }
+.popup_generico{
+	width: 600px;
+}
+
+/* @group pie */
+.pie{
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	background: url(../img/solapa_inf_1px.png) repeat-x 0 0px;
+}
+
+.pie .despliegue{
+	position: absolute;
+	right: -35px;
+	bottom: 5px;
+}
+
+.pie .inicio,
+.pie .ruta,
+.pie .botones,
+.pie .despliegue{	
+	display: inline;
+}
+
+.pie .botones{
+	font-size: 0.8em;
+}
+
+.pie .botones img{
+	margin-top: -3px;
+}
+
+.pie .botones a{
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.pie img{
+	vertical-align: middle;
+	padding-bottom: 6px;
+}
+
+.pie div.ruta a,
+.pie span.ruta{
+	font-size: 0.8em;
+	color: #fff;
+}
+
+/* @end */
+
