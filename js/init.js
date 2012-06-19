@@ -1,6 +1,6 @@
 $(function(){ 
 	// Configuración del Scroll
-	$('.navegacion, .content, .ruta').localScroll({
+	$('.navegacion, .content, .ruta, .burbuja').localScroll({
 		target: '#ventana',
 		axis: 'x',
 		//easing: 'easeOutBack',
@@ -8,8 +8,11 @@ $(function(){
 		hash: true,
 		onBefore: function(){
 		    $.fancybox.close();
+		    $('.menu_izdo .boton a').HideAllBubblePopups();
+		    $('area').HideAllBubblePopups();
 		},
-		onAfter: function(anchor, settings){
+		onAfter: function(anchor, setting){
+			$('.pie').css('width','auto');
 			var diapo=$('#'+anchor.id);
 			var boton =diapo.find('.intro');
 			if (boton) {
@@ -52,8 +55,8 @@ $(function(){
 	
 	// Configuración de las burbujas del menú izquierdo
 	$('.menu_izdo .boton a').CreateBubblePopup({ 
-		innerHtmlStyle: 	  	{ color:'#5e5e5e', 'text-align':'center', 'font-size': '12px'},
-		themeName: 	  	 	'azure',
+		innerHtmlStyle: 	  	{ color:'#000', 'text-align':'left', 'font-size': '13px'},
+		themeName: 	  	 	'black',
 		themePath: 	  	 	'images/jquerybubblepopup-themes',							  						 
 		manageMouseEvents:	false,
 		position: 'bottom',
@@ -145,20 +148,19 @@ $(function(){
 	});
 	
 	// Configuración botonera desplegable
-	var ancho;
 	$('.despliegue').click(function(){
-		if ($('.despliegue').hasClass('cerrado')) {
+		if ($(this).hasClass('cerrado')) {
 			// Abre
-			$('.pie').animate({	width: ancho}, 'fast');
+			$(this).parent().animate({	width: $(this).parent().data('ancho')}, 'fast');
 			$('.ruta, .botones').fadeIn('fast');
-			$('.despliegue').html('<a href="#"><img src="img/solapa_inf_open.png" /></a>').removeClass('cerrado');;			
+			$(this).html('<a href="#"><img src="img/solapa_inf_open.png" /></a>').removeClass('cerrado');
 		}
 		else {
 			// Cierra
-			ancho  = $('.pie').width();
+			$(this).parent().data('ancho', $(this).parent().width());
 			$('.ruta, .botones').fadeOut('fast');
-			$('.pie').animate({width: 55}, 'fast');
-			$('.despliegue').html('<a href="#"><img src="img/solapa_inf_close.png" /></a>').addClass('cerrado');
+			$(this).parent().animate({width: 55}, 'fast');
+			$(this).html('<a href="#"><img src="img/solapa_inf_close.png" /></a>').addClass('cerrado');
 		}
 	});
 	

@@ -70,6 +70,13 @@ a:hover{
 	height: 250px;
 	float: left;
 }
+.video_peq{
+	width: 200px;
+	height: 230px;
+	margin-top: 5px;
+	margin-right: 10px;
+	float: left;
+}
 .titulo{
 	width: 460px;
 	height: 250px;
@@ -133,47 +140,6 @@ a:hover{
 
 /* @group popup */
 
-/*.img_fondo{
-	position: relative;
-	width: 1200px;
-	height: 950px;
-	z-index: -1;
-}
-
-.popup{
-	position: relative;
-	width: 600px;
-	height: 100;
-	z-index: 1;
-	top: -600px;
-	left: 400px;
-}
-.cabecera_popup{
-	background: url(../img/cab_pop.png) no-repeat;
-	width: 600px;
-	height: 60px;
-}
-.cabecera_popup img{
-	float: right;
-}
-.px_popup{
-	background: url(../img/1pxhor_pop.png) repeat-y;
-	width: 600px;
-}
-.intro{
-	padding: 0 20px;
-	color: #fff;
-}
-.intro h1{
-	color: #fff;
-}
-.pie_popup{
-	background: url(../img/pie_pop.png) no-repeat;
-	width: 600px;
-	height: 60px;
-}*/
-
-
 #fancybox-content p{
 	width: 600px;
 	color: #28a6c7;
@@ -208,6 +174,14 @@ a:hover{
 #servicios{
 	width: 200px;
 	text-align: left;
+}
+#tx_video, #tx_video2{
+	width: 240px;
+	overflow: scroll;
+	height: 300px;
+}
+#ayuda, #ayuda2, #ayuda3{
+	width: 100px;
 }
 /* @end */
 
