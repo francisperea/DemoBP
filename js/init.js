@@ -1,6 +1,6 @@
 $(function(){ 
 	// Configuración del Scroll
-	$('.navegacion, .content, .ruta, .burbuja').localScroll({
+	$('.inicio, .ruta, .navegacion, .burbuja').localScroll({
 		target: '#ventana',
 		axis: 'x',
 		//easing: 'easeOutBack',
@@ -12,7 +12,6 @@ $(function(){
 		    $('area').HideAllBubblePopups();
 		},
 		onAfter: function(anchor, setting){
-			$('.pie').css('width','auto');
 			var diapo=$('#'+anchor.id);
 			var boton =diapo.find('.intro');
 			if (boton) {
@@ -152,13 +151,15 @@ $(function(){
 		if ($(this).hasClass('cerrado')) {
 			// Abre
 			$(this).parent().animate({	width: $(this).parent().data('ancho')}, 'fast');
-			$('.ruta, .botones').fadeIn('fast');
+			$(this).prev('.ruta, .botones').fadeIn('fast');
+			//$('.ruta, .botones').fadeIn('fast');
 			$(this).html('<a href="#"><img src="img/solapa_inf_open.png" /></a>').removeClass('cerrado');
 		}
 		else {
 			// Cierra
 			$(this).parent().data('ancho', $(this).parent().width());
-			$('.ruta, .botones').fadeOut('fast');
+			$(this).prev('.ruta, .botones').fadeOut('fast');
+			//$('.ruta, .botones').fadeOut('fast');
 			$(this).parent().animate({width: 55}, 'fast');
 			$(this).html('<a href="#"><img src="img/solapa_inf_close.png" /></a>').addClass('cerrado');
 		}
